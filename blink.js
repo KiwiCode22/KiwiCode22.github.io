@@ -1,13 +1,13 @@
-const typedTextSpan = document.querySelector(".written-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ['um pequeno grupo de desenvolvedores web.', 'o grupo que vai fazer o website dos seus sonhos.', 'uns cuzao'];
-const typingDelay = 100;
-const erasingDelay = 50;
-const newTextDelay = 3000;
-let charIndex = 0;
-let arrayIndex = 0;
-const type = ()=>{
+window.addEventListener('DOMContentLoaded',()=>{
+  const typedTextSpan = document.querySelector(".written-text");
+  const cursorSpan = document.querySelector(".cursor");
+  const textArray = ['um pequeno grupo de desenvolvedores web.', 'o grupo que vai fazer o website dos seus sonhos.', 'uns cuzao'];
+  const typingDelay = 100;
+  const erasingDelay = 50;
+  const newTextDelay = 3000;
+  let charIndex = 0;
+  let arrayIndex = 0;
+  const type = ()=>{
   if(!cursorSpan.classList.contains('typing'))cursorSpan.classList.add('typing');
   if(arrayIndex > textArray.length - 1)arrayIndex=0;
   if(charIndex < textArray[arrayIndex].length){
@@ -30,6 +30,7 @@ const erase = ()=>{
   }else{
     setTimeout(type, typingDelay);
   }
-  
 }
 setTimeout(type, newTextDelay + 250);
+})
+
