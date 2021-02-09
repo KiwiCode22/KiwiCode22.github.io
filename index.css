@@ -38,15 +38,45 @@ header {
   height:90vh;
 }
 
+
+.cursor{
+  display: inline-block;
+  width:3px !important;
+  background-color:#fff;
+  animation: blink 1s infinite;
+}
 .text-animation {
+  width:50vw;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   position:absolute;
   left: 100px;
   top:200px;
   color: #ffffff;
   font-family: 'Nunito', sans-serif;
-  font-size: 18pt;
+  font-size: 26pt;
   font-weight: 700;
 }
+.written-text{
+  font-size: 25pt;
+  font-weight: 400;
+}
+.cursor.typing{
+  animation:none;
+}
+@keyframes blink {
+  49%{
+    background-color:#fff;
+  }
+  50%{
+    background-color:transparent;
+  }
+  99%{
+    background-color:transparent;
+  }
+}
+
+
 
 .divider { 
   position:absolute;
