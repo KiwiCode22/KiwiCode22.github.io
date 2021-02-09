@@ -45,13 +45,15 @@ header {
   color: #ffffff;
   font-family: 'Nunito', sans-serif;
   font-size: 18pt;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .divider { 
   position:absolute;
   bottom:0;
 }
+
+
 
 
 
@@ -69,6 +71,12 @@ header {
   margin-bottom: 40px;
 }
 #servicos .card {
+  border:  3px solid #61ab5a;
+  border-radius: 16px;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 28px 28px 41px -13px rgba(0,0,0,0.3);
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   transition: transform 0.5s;
