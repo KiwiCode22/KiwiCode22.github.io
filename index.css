@@ -118,6 +118,11 @@ h1{
 #servicos .card:hover {
   transform: translateY(-20px);
 }
+.fa-laptop-code{
+  color: #00f767;
+  font-size:40pt;
+  margin-bottom: 8px;
+}
 .fa-check {
   color:#61ab5a
 }
