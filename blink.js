@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded',()=>{
   const typedTextSpan = document.querySelector(".written-text");
   const cursorSpan = document.querySelector(".cursor");
-  const textArray = ['um pequeno grupo de desenvolvedores web.', 'o grupo que vai fazer o website dos seus sonhos.', 'uns cuzao'];
+  const textArray = ['um pequeno grupo de desenvolvedores web.', 'o grupo que vai fazer o website dos seus sonhos.'];
   const typingDelay = 100;
   const erasingDelay = 50;
   const newTextDelay = 3000;
