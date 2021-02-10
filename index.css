@@ -14,11 +14,13 @@ background-color: rgb(46, 46, 46);
 }
 body,html {
   background-color:#eeede3;
+  overflow-x:hidden;
 }
 
 /* Navbar Bootstrap */
 .nav-color {
-  background: rgba(0, 0, 0, 0.1) !important;
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.1);
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   font-size: 14pt;
@@ -26,6 +28,9 @@ body,html {
 }
 .center-navbar {
   width: 60%;
+}
+.center-collapse-items {
+  text-align: center;
 }
 
 
@@ -38,7 +43,10 @@ header {
   height:90vh;
 }
 
-
+.header-container {
+  width: 100%;
+  height: 100%;
+}
 .cursor{
   display: inline-block;
   width:3px !important;
@@ -78,27 +86,54 @@ h1{
     background-color:transparent;
   }
 }
+
+.btn button{
+  border-radius: 40px;
+  background-color: transparent;
+  border: solid 3px #fff;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20pt;
+  transition: 0.6s;
+  cursor: pointer;
+  position: absolute;
+  top:335px;
+  left: 90px;
+  padding:20px;
+  box-shadow: 28px 28px 41px -13px rgba(0,0,0,0.48);
+}
+.btn button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+
 .coding-img{
   width:40%;
-  margin-top:15px;
+  margin-top:1px;
   float:right;
 }
 
 
 .divider { 
   position:absolute;
-  bottom:0;
+  bottom:-2px;
 }
 
 
 
-
-
+#servicos{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
 #servicos hr {
   background-color:#b89a61;
   height: 2px;
 }
-#servicos .container {
+#servicos .my-container {
+  width:85vw;
   font-size:18pt;
   display: flex;
   justify-content: space-around;
@@ -108,6 +143,7 @@ h1{
   margin-bottom: 40px;
 }
 #servicos .card {
+  width:30%;
   border:  3px solid #61ab5a;
   border-radius: 16px;
   background-color: #fff;
@@ -134,9 +170,19 @@ h1{
   color:#ff0000
 }
 
-
-
-
+.modal-body{
+  font-size:18pt;
+}
+.modal-body a{
+  text-decoration: none;
+  color:#000;
+}
+.modal-body a:hover{
+  color:rgb(81,11,162);
+}
+.social{
+  cursor: pointer;
+}
 
 footer {
   text-align: center;
@@ -150,4 +196,111 @@ footer {
 footer p {
   margin: 0;
   padding: 5px;
+}
+
+
+
+@media (max-width: 1400px) {
+  #servicos .my-container {
+    width:90vw;
+  }
+}
+@media (max-width: 1300px) {
+  #servicos .my-container {
+    width:100vw;
+  }
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1100px) {
+  #servicos .my-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #servicos .card {
+    width: 60vw;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 990px) {
+  .header-container div{
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .header-container button{
+    left: 0;
+    right: 0;
+    margin: auto
+  }
+  .text-animation {
+    width:70vw;
+  }
+  .coding-img {
+    display: none;
+  }
+  .btn button{
+    top:380px;
+    font-size: 15pt;
+  }
+  h1{
+    font-size: 20pt;
+    font-weight: 600;
+  }
+  .written-text{
+    font-size: 19pt;
+    font-weight: 400;
+  }
+}
+@media (max-width: 670px) {
+  .text-animation {
+    width:80vw;
+  }
+  #servicos .my-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #servicos .card {
+    width: 80vw;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 485px) {
+  .center-navbar {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .text-animation {
+    width:90vw;
+  }
+  #servicos .my-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #servicos .card {
+    width: 90vw;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 380px) {
+  #servicos .my-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #servicos .card {
+    width: 96vw;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 368px) {
+  .center-navbar {
+    width: 90%;
+  }
 }

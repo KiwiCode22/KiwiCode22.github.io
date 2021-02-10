@@ -35,15 +35,15 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-color">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-color">
       <div class="container-fluid center-navbar ">
-        <img src="KiwiCodeLogo2.png" alt="Kiwi Logo" width="60" height="60">
+        <img src="kiwi.svg" alt="Kiwi Logo" width="60" height="60">
         <a class="navbar-brand" href="#">&nbsp; Kiwi Code</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="collapseBtn"class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto center-collapse-items">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -60,12 +60,18 @@
         </div>
       </div>
     </nav>
-    <div class="text-animation">
-      <h1>Somos a Kiwi Code, <span class="written-text"></span><span class="cursor">&nbsp;</span> </h1>
+    <div class="header-container">
+      <div class="text-animation">
+        <h1>Somos a Kiwi Code, <span class="written-text"></span><span class="cursor">&nbsp;</span> </h1>
+      </div>
+      <div class="btn">
+        <button data-bs-toggle="modal" data-bs-target="#contactModal"><i class="fa fa-whatsapp" aria-hidden="true"></i> Faça um orçamento</button>
+      </div>
+      <div>
+        <img class="coding-img" src="imagem-pessoa-programando-vetor.png" alt="Imagem de pessoa programando">
+      </div>
     </div>
-    <div>
-      <img class="coding-img" src="imagem-pessoa-programando-vetor.png" alt="Imagem de pessoa programando">
-    </div>
+
     <svg class="divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
       <path fill="#eeede3" fill-opacity="1" d="M0,160L120,181.3C240,203,480,245,720,261.3C960,277,1200,267,1320,261.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
     </svg>
@@ -74,7 +80,7 @@
   <article>
     <section id="servicos">
       <h2>SERVIÇOS</h2>
-		  <div class="container">
+		  <div class="my-container">
           <div class="card">
             <div>
               <i class="fas fa-laptop-code"></i>
@@ -130,7 +136,38 @@
     <p>Desenvolvido por Kiwi Code</p>
   </footer>
 
-
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contatos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-around ">
+            <div class="d-flex flex-column w-50 text-center">
+              <p><strong>Lucas L.</strong></p>
+              <p class="social"><i class="fab fa-discord"></i> .Lucas#9080</p>
+              <div class="d-flex justify-content-around">
+                <a class="social" href="https://api.whatsapp.com/send?phone=5548999416983" target="_blank"><i class="fab fa-whatsapp"></i> 48999416983</a>
+              </div>
+            </div>
+            <div class="d-flex flex-column w-50 text-center">
+              <p><strong>Lucas P.</strong></p>
+              <p class="social"><i class="fab fa-discord"></i> Luskinhas#0881</p>
+              <div class="d-flex justify-content-around">
+                <a class="social" href="https://api.whatsapp.com/send?phone=5548991107166" target="_blank"><i class="fab fa-whatsapp"></i> 48991107166</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="index.js"></script>
 </html>
