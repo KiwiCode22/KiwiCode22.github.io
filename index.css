@@ -12,40 +12,28 @@ background-color: rgb(46, 46, 46);
 * {
   scroll-behavior: smooth;
 }
+*::selection {
+  background: #5e5e5e;
+  color: white;
+}
 body,html {
   background-color:#eeede3;
   overflow-x:hidden;
 }
 
-/* Navbar Bootstrap */
-.nav-color {
-  transition: background-color 0.5s;
-  background-color: rgba(0, 0, 0, 0.1);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 14pt;
-  letter-spacing: 2px;
-}
-.center-navbar {
-  width: 60%;
-}
-.center-collapse-items {
-  text-align: center;
-}
-
-
-
+ 
 
 header {
   position:relative;
   background: rgb(39,70,36);
-  background: linear-gradient(298deg, rgb(108, 190, 100) 0%, rgb(120, 231, 110) 25%, rgb(120, 231, 110) 80%, rgb(106, 194, 96) 100%);
+  background: linear-gradient(298deg, #8ba157 0%, #c1dc83 25%, #c1dc83 80%, #8ba157 100%);
   height:90vh;
 }
 
 .header-container {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .cursor{
   display: inline-block;
@@ -75,17 +63,6 @@ h1{
 .cursor.typing{
   animation:none;
 }
-@keyframes blink {
-  49%{
-    background-color:#fff;
-  }
-  50%{
-    background-color:transparent;
-  }
-  99%{
-    background-color:transparent;
-  }
-}
 
 .btn button{
   border-radius: 40px;
@@ -109,8 +86,8 @@ h1{
 
 
 .coding-img{
-  width:40%;
-  margin-top:1px;
+  width:600px;
+  margin-top:20px;
   float:right;
 }
 
@@ -144,7 +121,7 @@ h1{
 }
 #servicos .card {
   width:30%;
-  border:  3px solid #61ab5a;
+  border:  3px solid #c1dc83;
   border-radius: 16px;
   background-color: #fff;
   text-align: center;
@@ -159,12 +136,12 @@ h1{
   transform: translateY(-20px);
 }
 .fa-laptop-code{
-  color: #00f767;
+  color: #3bf789;
   font-size:40pt;
   margin-bottom: 8px;
 }
 .fa-check {
-  color:#61ab5a
+  color:#3bf789;
 }
 .fa-times {
   color:#ff0000
@@ -206,6 +183,10 @@ footer p {
   }
 }
 @media (max-width: 1300px) {
+  .coding-img{
+    width:500px;
+    margin-left: -50px;
+  }
   #servicos .my-container {
     width:100vw;
   }
@@ -269,11 +250,6 @@ footer p {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 485px) {
-  .center-navbar {
-    width: 80%;
-  }
-}
 @media (max-width: 400px) {
   .text-animation {
     width:90vw;
@@ -299,8 +275,14 @@ footer p {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 368px) {
-  .center-navbar {
-    width: 90%;
+@keyframes blink {
+  49%{
+    background-color:#fff;
+  }
+  50%{
+    background-color:transparent;
+  }
+  99%{
+    background-color:transparent;
   }
 }

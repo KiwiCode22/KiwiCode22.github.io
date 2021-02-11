@@ -1,0 +1,25 @@
+/* Navbar Bootstrap */
+.nav-color {
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
+  letter-spacing: 2px;
+}
+.center-navbar {
+  width: 60%;
+}
+.center-collapse-items {
+  text-align: center;
+}
+@media (max-width: 485px) {
+  .center-navbar {
+    width: 80%;
+  }
+}
+@media (max-width: 368px) {
+  .center-navbar {
+    width: 90%;
+  }
+}
